@@ -1,0 +1,10 @@
+<div class="container">
+    <button (click)="filterType('animal')">Animal</button>
+    <button (click)="filterType('color')">Color</button>
+    <button (click)="filterType('flower')">Flower</button>
+    <div class="output">
+        <span *ngIf="received">Selected item is {{ received }}</span>
+      </div>
+</div>
+
+<app-child [items]="filteredItems" (SelectedItemEmitter)="SelectedItem($event)" ></app-child>

@@ -1,0 +1,5 @@
+<p>child works!</p>
+<div class="container">
+    <button *ngFor="let item of items" (click)="sendtoParent(item.name)">{{item.name}}</button>
+</div>
+
